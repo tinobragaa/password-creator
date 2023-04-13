@@ -59,4 +59,26 @@ def welcome_message():
         "2 - Letters only or mixed characters (letters/numbers/symbols)."
     )
 
+    while True:
+        name = input("First things first, enter your name? \n").strip()
+        if name == "":
+            print(Fore.LIGHTRED_EX + "\nTry again, name cannot be blank.")
+            print(Style.RESET_ALL)
+        elif len(name) < 3:
+            print(Fore.LIGHTRED_EX + "\nTry again, a minimum of 3 characters.")
+            print(Style.RESET_ALL)
+        elif len(name) > 16:
+            print(Fore.LIGHTRED_EX + "\nTry again, a maximum of 16 characters.")
+            print(Style.RESET_ALL)
+        elif name.isdigit():
+            print(Fore.LIGHTRED_EX + "\nTry again, letters only.")
+            print(Style.RESET_ALL)
+        else:
+            typewriter_print(f"\nHi {name}, let's make your unique password!")
+            time.sleep(2)
+            clear_terminal()
+            break
+
+
+
 welcome_message()
