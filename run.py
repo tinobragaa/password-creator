@@ -7,11 +7,12 @@ import os
 from time import sleep
 from colorama import Fore, Style
 
-# Code reference from https://stackoverflow.com/questions/20302331/typing-effect-in-python
+# Code to create the typewriter effect, credit:
+# https://stackoverflow.com/questions/20302331/typing-effect-in-python
 def typewriter_print(text, speed=0.03):
-    '''
+    """
     This function add the typewriter effect.
-    '''
+    """
     for character in text:
         sys.stdout.write(character)
         sys.stdout.flush()
@@ -19,9 +20,9 @@ def typewriter_print(text, speed=0.03):
     print("\n")
 
 def clear_terminal():
-    '''
+    """
     This function clear the terminal.
-    '''
+    """
     os.system("clear")
 
 def welcome_message():
@@ -52,11 +53,11 @@ def welcome_message():
     )
     typewriter_print(
         "We provide a secure password, all we need is that you "
-        + "follow two steps and choose:"
+        + "follow two steps:"
     )
-    typewriter_print("1 - Between 8 and 64 characters long.")
+    typewriter_print("1 - Choose between 8 and 64 characters long.")
     typewriter_print(
-        "2 - Letters only or mixed characters (letters/numbers/symbols)."
+        "2 - Choose letters only or mixed characters (letters/numbers/symbols)."
     )
 
     while True:
@@ -79,6 +80,47 @@ def welcome_message():
             clear_terminal()
             break
 
+def get_length():
+    """This function takes the password length chosen
+    by the user. The user's input will be stored as
+    an integer and needs to be a number between
+    8 and 64, otherwise will raise an exception.
+    """
+    typewriter_print(
+        "If you need to restart the program, just "
+        + "type restart."
+    )
+    typewriter_print(
+        "Enter your password length, it needs to be "
+        + "a number between 8 and 64. The bigger, the saffer."
+    )
 
+    while True:
+        try:
+            password_length_chosen = input()
+
+            if password_length_chosen == "restart":
+                # restart function
+                break
+            else:
+                password_length_chosen = int(password_length_chosen)
+
+            if password_length_chosen > 64 or password_length_chosen < 8:
+                raise ValueError
+
+            typewriter_print(
+                f"\nGood sutff! Your password length is {password_length_chosen} "
+                + "characters long."
+            )
+
+            return password_length_chosen
+
+        except ValueError:
+            print(
+                Fore.LIGHTRED_EX
+                + "\nTry again, it needs to be number between 8 and 64."
+            )
+            print(Style.RESET_ALL)
 
 welcome_message()
+get_length()
