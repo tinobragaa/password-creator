@@ -3,6 +3,7 @@ import pyfiglet
 import random
 import time
 import sys
+import os
 from time import sleep
 from colorama import Fore, Style
 
@@ -16,6 +17,12 @@ def typewriter_print(text, speed=0.03):
         sys.stdout.flush()
         time.sleep(speed)
     print("\n")
+
+def clear_terminal():
+    '''
+    This function clear the terminal.
+    '''
+    os.system("clear")
 
 def welcome_message():
     """
