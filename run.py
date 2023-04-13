@@ -1,11 +1,12 @@
 # Import necessary modules.
-import pyfiglet
-import random
 import time
-import sys
 import os
+import sys
+import random
 from time import sleep
+import pyfiglet
 from colorama import Fore, Style
+
 
 # Code to create the typewriter effect, credit:
 # https://stackoverflow.com/questions/20302331/typing-effect-in-python
@@ -19,11 +20,13 @@ def typewriter_print(text, speed=0.03):
         time.sleep(speed)
     print("\n")
 
+
 def clear_terminal():
     """
     This function clear the terminal.
     """
     os.system("clear")
+
 
 def welcome_message():
     """
@@ -80,6 +83,7 @@ def welcome_message():
             clear_terminal()
             break
 
+
 def get_length():
     """This function takes the password length chosen
     by the user. The user's input will be stored as
@@ -122,5 +126,13 @@ def get_length():
             )
             print(Style.RESET_ALL)
 
-welcome_message()
-get_length()
+
+def main_function():
+    """ This function is responsible to control the flow of the program
+    and print out the password created.
+    """
+    welcome_message()
+    get_length()
+
+
+main_function()
