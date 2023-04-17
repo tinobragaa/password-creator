@@ -1,8 +1,8 @@
-# TYE: Track Your Expenses
+# Password Creator
 (Developer: Valentino Braga)
 
 
-TYE: Track Your Expenses is a
+Password Creator is a
 
 ![Mockup image]()
 
