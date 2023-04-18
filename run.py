@@ -51,6 +51,10 @@ def welcome_message():
     time.sleep(.5)
     typewriter_print("Welcome to the password creator!")
     typewriter_print(
+        "If you need to close the program, just "
+        + "type exit."
+    )
+    typewriter_print(
         "Did you know it only takes seconds to hack "
         + "small passwords?"
     )
@@ -68,7 +72,10 @@ def welcome_message():
         try:
             user_name = input()
 
-            if user_name == "":
+            if user_name == "exit":
+                exit_generator()
+
+            elif user_name == "":
                 raise ValueError("name cannot be blank.")
 
             elif user_name.isdigit():
@@ -96,15 +103,12 @@ def welcome_message():
 
 
 def get_length():
-    """This function takes the password length chosen
+    """
+    This function takes the password length chosen
     by the user. The user's input will be stored as
     an integer and needs to be a number between
     8 and 64, otherwise will raise an exception.
     """
-    typewriter_print(
-        "If you need to restart the program, just "
-        + "type restart."
-    )
     typewriter_print(
         "Enter your password length, it needs to be "
         + "a number between 8 and 64. The bigger, the saffer.\n"
@@ -114,8 +118,8 @@ def get_length():
         try:
             password_length_chosen = input()
 
-            if password_length_chosen == "restart":
-                # restart function
+            if password_length_chosen == "exit":
+                exit_generator()
                 break
             else:
                 password_length_chosen = int(password_length_chosen)
@@ -139,7 +143,8 @@ def get_length():
 
 
 def get_style():
-    """This function takes the password style chosen
+    """
+    This function takes the password style chosen
     by the user. The user's input will be stored as
     an integer and needs to be 1 or 2, otherwise
     will raise an exception.
@@ -156,8 +161,8 @@ def get_style():
         try:
             password_style = input()
 
-            if password_style == "restart":
-                # restart function
+            if password_style == "exit":
+                exit_generator()
                 break
             else:
                 password_style = int(password_style)
@@ -186,8 +191,27 @@ def get_style():
             print(Style.RESET_ALL)
 
 
+def exit_generator():
+    """
+    This function prints a warning message
+    and exit the program.
+    """
+    clear_terminal()
+    typewriter_print("The program will exit in...")
+    typewriter_print("3... \n")
+    time.sleep(1)
+    typewriter_print("2... \n")
+    time.sleep(1)
+    typewriter_print("1... \n")
+    time.sleep(.5)
+    typewriter_print("The program is now closed.")
+    time.sleep(.5)
+    sys.exit()
+
+
 def main_function():
-    """ This function is responsible to control the flow of the program
+    """
+    This function is responsible to control the flow of the program
     and print out the password created.
     """
     welcome_message()
