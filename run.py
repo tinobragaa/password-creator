@@ -138,7 +138,7 @@ def get_length():
         except ValueError:
             print(
                 Fore.LIGHTRED_EX
-                + "\nTry again, it needs to be number between 8 and 64."
+                + "\nTry again, choose a number between 8 and 64."
             )
             print(Style.RESET_ALL)
 
@@ -232,7 +232,8 @@ def exit_generator():
     typewriter_print("1... \n")
     time.sleep(.5)
     typewriter_print("The program is now closed.")
-    time.sleep(.5)
+    time.sleep(3)
+    clear_terminal()
     sys.exit()
 
 
