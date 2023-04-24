@@ -143,7 +143,7 @@ def get_length():
             print(Style.RESET_ALL)
 
 
-def get_style():
+def get_style(password_length_chosen):
     """
     This function takes the password style chosen
     by the user. The user's input will be stored as
@@ -174,14 +174,17 @@ def get_style():
             if password_style == 1:
                 typewriter_print(
                     f"\nHmm, you chose {password_style} so your password "
-                    + "style will contain letters only."
+                    + "style will contain letters only and will be "
+                    + f"{password_length_chosen} characters long."
                 )
             else:
                 typewriter_print(
                     f"\nSounds safe, you chose {password_style} so your "
-                    + "password will contain letters, numbers and symbols."
+                    + "password will contain letters, numbers and symbols and "
+                    + f"will be {password_length_chosen} characters long."
                 )
 
+            time.sleep(2.5)
             return password_style
 
         except ValueError:
@@ -244,9 +247,8 @@ def main_function():
     """
     welcome_message()
     password_length_chosen = get_length()
-    password_style = get_style()
+    password_style = get_style(password_length_chosen)
     password = create_password(password_style, password_length_chosen)
-    print(password)
 
 
 main_function()
