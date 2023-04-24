@@ -112,7 +112,7 @@ def get_length():
     """
     typewriter_print(
         "Enter your password length, it needs to be "
-        + "a number between 8 and 64. The bigger, the saffer.\n"
+        + "a number between 8 and 64. The bigger, the safer.\n"
     )
 
     while True:
@@ -221,6 +221,59 @@ def create_password(password_style, password_length_chosen):
     return password
 
 
+def display_password(password):
+    """
+    This function will take the 'password' parameter and will display
+    the created password for the user.
+    """
+    clear_terminal()
+    typewriter_print("\nYour password is being created...")
+    typewriter_print(
+        "\nCounting the number of atoms in the universe... okay, not really, "
+        + "just making sure your password is strong enough..."
+    )
+    time.sleep(.8)
+    typewriter_print(
+        "\nChecking for loopholes... and finding none, sorry hackers..."
+    )
+    time.sleep(.8)
+    typewriter_print(
+        "\nGenerating random numbers... don't worry, they're very friendly..."
+    )
+    time.sleep(.8)
+    typewriter_print("\nYour password is now ready:\n")
+    time.sleep(.8)
+    typewriter_print(
+        Fore.LIGHTBLUE_EX
+        + password
+    )
+    print(Style.RESET_ALL)
+    time.sleep(1)
+    typewriter_print("Would you like to start again? ( Y / N )")
+
+    while True:
+        try:
+            reset = input()
+
+            if reset in ("y", "Y"):
+                time.sleep(1)
+                clear_terminal()
+                os.system("python3 'run.py'")
+            elif reset in ("n", "N", "exit"):
+                time.sleep(1)
+                exit_generator()
+            else:
+                raise ValueError
+            return
+
+        except ValueError:
+            print(
+                Fore.LIGHTRED_EX
+                + "\nTry again, please choose Y or N."
+            )
+            print(Style.RESET_ALL)
+
+
 def exit_generator():
     """
     This function prints a warning message and
@@ -249,6 +302,7 @@ def main_function():
     password_length_chosen = get_length()
     password_style = get_style(password_length_chosen)
     password = create_password(password_style, password_length_chosen)
+    display_password(password)
 
 
 main_function()
