@@ -3,6 +3,7 @@ import time
 import os
 import sys
 import random
+import string
 import pyfiglet
 from colorama import Fore, Style
 
@@ -69,6 +70,7 @@ def welcome_message():
     typewriter_print("First things first, enter your name:\n")
 
     while True:
+        user_name = ""
         try:
             user_name = input()
 
@@ -93,7 +95,6 @@ def welcome_message():
                 )
                 time.sleep(2.5)
                 clear_terminal()
-                break
 
             return user_name
 
@@ -152,7 +153,7 @@ def get_style():
 
     typewriter_print(
         "What characters would you like to have your password? "
-        + "Remember: the more complex the safer!",
+        + "Remember: the more complex the safer!"
     )
     typewriter_print("1 - Letters only.")
     typewriter_print("2 - Mixed characters: letters, numbers and symbols.\n")
@@ -167,7 +168,7 @@ def get_style():
             else:
                 password_style = int(password_style)
 
-            if not (1 <= password_style <= 2):
+            if not 1 <= password_style <= 2:
                 raise ValueError
 
             if password_style == 1:
@@ -186,15 +187,41 @@ def get_style():
         except ValueError:
             print(
                 Fore.LIGHTRED_EX
-                + "\nTry again, it needs to be a number between 1 and 2."
+                + "\nTry again, please choose 1 or 2."
             )
             print(Style.RESET_ALL)
 
 
+def create_password(password_style, password_length_chosen):
+    """
+    This function creates a random and unique password. It takes
+    two parameters: password length and password style from the
+    previous functions.
+    """
+    if password_style == 1:
+        # Generate a password with letters only
+        password = ''.join(
+            random.choices(string.ascii_letters, k=password_length_chosen)
+        )
+
+    if password_style == 2:
+        # Generate a password with letters, numbers, and symbols
+        password = ''.join(
+            random.choices(
+                string.ascii_letters
+                + string.digits
+                + string.punctuation,
+                k=password_length_chosen
+            )
+        )
+
+    return password
+
+
 def exit_generator():
     """
-    This function prints a warning message
-    and exit the program.
+    This function prints a warning message and
+    exit the program.
     """
     clear_terminal()
     typewriter_print("The program will exit in...")
@@ -215,8 +242,10 @@ def main_function():
     and print out the password created.
     """
     welcome_message()
-    get_length()
-    get_style()
+    password_length_chosen = get_length()
+    password_style = get_style()
+    password = create_password(password_style, password_length_chosen)
+    print(password)
 
 
 main_function()
