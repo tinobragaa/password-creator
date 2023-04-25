@@ -12,7 +12,10 @@ from colorama import Fore, Style
 # https://stackoverflow.com/questions/20302331/typing-effect-in-python
 def typewriter_print(text, speed=0.03):
     """
-    This function add the typewriter effect.
+    This function adds a typewriter effect to the text printed
+    to the console. This function iterates over each character
+    in the text, writes it to the console, flushes the buffer,
+    and waits 0.03s before continuing to the next character.
     """
     print(Style.RESET_ALL)
     for character in text:
@@ -31,9 +34,10 @@ def clear_terminal():
 
 def welcome_message():
     """
-    This function showcase the welcome message,
-    logo design, explain what the program is
-    and lead to the get_length function.
+    This function showcases the welcome message and asks for
+    the user's name. It uses a while loop to validate the
+    user's input, and raises exceptions if the input is
+    invalid. The function returns the user's name.
     """
     print(
         Fore.CYAN
@@ -106,10 +110,13 @@ def welcome_message():
 
 def get_length():
     """
-    This function takes the password length chosen
-    by the user. The user's input will be stored as
-    an integer and needs to be a number between
-    8 and 64, otherwise will raise an exception.
+    This function asks the user to input the desired password
+    length and validates the input using a while loop and
+    exception handling. The function returns the password
+    length as an integer.
+
+    Returns:
+        int: The length of the password chosen by the user.
     """
     typewriter_print(
         "Enter your password length, it needs to be "
@@ -146,10 +153,18 @@ def get_length():
 
 def get_style(password_length_chosen):
     """
-    This function takes the password style chosen
-    by the user. The user's input will be stored as
-    an integer and needs to be 1, 2 or 3, otherwise
-    will raise an exception.
+    This function asks the user to choose the desired password style
+    (letters only, numbers only, or mixed characters), and validates
+    the input using a while loop and exception handling. The
+    function returns the chosen style as an integer.
+
+    Args:
+    - password_length_chosen: An integer representing the length of the
+    password.
+
+    Returns:
+    An integer representing the chosen style:
+    1 for letters only, 2 for numbers only, and 3 for mixed characters.
     """
 
     typewriter_print(
@@ -205,9 +220,14 @@ def get_style(password_length_chosen):
 
 def create_password(password_style, password_length_chosen):
     """
-    This function creates a random and unique password. It takes
-    two parameters: password length and password style from the
-    previous functions.
+    This function generate a random password of the specified style and length.
+
+    Args:
+        password_style (int): The style of the password to generate.
+        password_length_chosen (int): The length of the password to generate.
+
+    Returns:
+        str: A random password of the specified style and length.
     """
     if password_style == 1:
         # Generate a password with letters only.
@@ -234,8 +254,9 @@ def create_password(password_style, password_length_chosen):
 
 def display_password(password):
     """
-    This function will take the 'password' parameter and will display
-    the created password for the user.
+    This function takes a 'password' parameter and displays it to the user
+    in a formatted and visually appealing way. It also prompts the user to
+    start again or exit the password generator.
     """
     clear_terminal()
     typewriter_print("\nYour password is being created...")
