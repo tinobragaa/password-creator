@@ -83,12 +83,15 @@ def welcome_message():
     )
     typewriter_print(
         "We provide a secure password, all we need is that you "
-        + "follow two steps:"
+        + "follow three steps:"
     )
     typewriter_print("1 - Choose between 8 and 64 characters long.")
     typewriter_print(
         "2 - Choose a password style: letters only, numbers only or mixed "
         + "characters (letters/numbers/symbols)."
+    )
+    typewriter_print(
+        "3 - Choose whether you would like to save your password or not."
     )
     typewriter_print("First things first, enter your name:\n")
 
@@ -286,7 +289,8 @@ def display_password(password):
     )
     time.sleep(.8)
     typewriter_print(
-        "\nGenerating random numbers... don't worry, they're very friendly..."
+        "\nGenerating random characters... don't worry, they're "
+        + "very friendly..."
     )
     time.sleep(.8)
     typewriter_print("\nYour password is now ready:\n")
@@ -297,6 +301,32 @@ def display_password(password):
     )
     print(Style.RESET_ALL)
     time.sleep(1)
+    typewriter_print("Would you like to save your password? ( Y / N )")
+
+    while True:
+        try:
+            save_password = input()
+
+            if save_password == "exit":
+                time.sleep(1)
+                exit_generator()
+            elif save_password in ("y", "Y"):
+                time.sleep(1)
+                store_password(password)
+            elif save_password in ("n", "N"):
+                time.sleep(1)
+                break
+            else:
+                raise ValueError
+            return
+
+        except ValueError:
+            print(
+                Fore.LIGHTRED_EX
+                + "\nTry again, please choose Y or N."
+            )
+            print(Style.RESET_ALL)
+
     typewriter_print("Would you like to start again? ( Y / N )")
 
     while True:
@@ -322,6 +352,42 @@ def display_password(password):
             print(Style.RESET_ALL)
 
 
+def store_password(password):
+    """
+    This function will save the created password with
+    username and URL in the spreadsheet.
+    """
+    clear_terminal()
+    print(
+        Fore.CYAN
+        + "===================================="
+        + Style.RESET_ALL
+    )
+    print("Welcome to the Password Manager!")
+    print(
+        Fore.CYAN
+        + "===================================="
+        + Style.RESET_ALL
+    )
+    typewriter_print(
+        "A place where you can store your login information with the "
+        + "password you just created!"
+    )
+    typewriter_print(
+        "We just need your username and URL. We'll guard your details "
+        + "so you don't need to worry!"
+    )
+    typewriter_print(
+        "The password you created is: "
+        + Fore.BLUE
+        + f"{password}"
+        + Style.RESET_ALL
+        + "."
+    )
+    typewriter_print("Enter your username:")
+    typewriter_print("Enter the URL:")
+
+
 def exit_generator():
     """
     This function prints a warning message and
@@ -336,7 +402,7 @@ def exit_generator():
     typewriter_print("1... \n")
     time.sleep(.5)
     typewriter_print("The program is now closed.")
-    time.sleep(3)
+    time.sleep(2)
     clear_terminal()
     sys.exit()
 
@@ -351,6 +417,7 @@ def main_function():
     password_style = get_style(password_length_chosen)
     password = create_password(password_style, password_length_chosen)
     display_password(password)
+    store_password(password)
 
 
 main_function()
