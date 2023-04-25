@@ -312,7 +312,7 @@ def display_password(password):
                 exit_generator()
             elif save_password in ("y", "Y"):
                 time.sleep(1)
-                store_password(password)
+                return True
             elif save_password in ("n", "N"):
                 time.sleep(1)
                 break
@@ -360,13 +360,13 @@ def store_password(password):
     clear_terminal()
     print(
         Fore.CYAN
-        + "===================================="
+        + "================================"
         + Style.RESET_ALL
     )
-    print("Welcome to the Password Manager!")
+    print("\nWelcome to the Password Manager!\n")
     print(
         Fore.CYAN
-        + "===================================="
+        + "================================"
         + Style.RESET_ALL
     )
     typewriter_print(
