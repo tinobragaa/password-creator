@@ -129,7 +129,6 @@ def get_length():
 
             if password_length_chosen == "exit":
                 exit_generator()
-                break
             else:
                 password_length_chosen = int(password_length_chosen)
 
@@ -181,7 +180,6 @@ def get_style(password_length_chosen):
 
             if password_style == "exit":
                 exit_generator()
-                break
             else:
                 password_style = int(password_style)
 
