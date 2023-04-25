@@ -65,7 +65,8 @@ def welcome_message():
     )
     typewriter_print("1 - Choose between 8 and 64 characters long.")
     typewriter_print(
-        "2 - Choose letter only or mixed characters (letters/numbers/symbols)."
+        "2 - Choose a password style: letters only, numbers only or mixed "
+        + "characters (letters/numbers/symbols)."
     )
     typewriter_print("First things first, enter your name:\n")
 
@@ -147,16 +148,17 @@ def get_style(password_length_chosen):
     """
     This function takes the password style chosen
     by the user. The user's input will be stored as
-    an integer and needs to be 1 or 2, otherwise
+    an integer and needs to be 1, 2 or 3, otherwise
     will raise an exception.
     """
 
     typewriter_print(
-        "What characters would you like to have your password? "
+        "Which characters would you like to have in your password? "
         + "Remember: the more complex the safer!"
     )
     typewriter_print("1 - Letters only.")
-    typewriter_print("2 - Mixed characters: letters, numbers and symbols.\n")
+    typewriter_print("2 - Numbers only.")
+    typewriter_print("3 - Mixed characters: letters, numbers and symbols.\n")
 
     while True:
         try:
@@ -168,13 +170,19 @@ def get_style(password_length_chosen):
             else:
                 password_style = int(password_style)
 
-            if not 1 <= password_style <= 2:
+            if not 1 <= password_style <= 3:
                 raise ValueError
 
             if password_style == 1:
                 typewriter_print(
                     f"\nHmm, you chose {password_style} so your password "
                     + "style will contain letters only and will be "
+                    + f"{password_length_chosen} characters long."
+                )
+            elif password_style == 2:
+                typewriter_print(
+                    f"\nOkey-dokey, you chose {password_style} so your "
+                    + "password will contain numbers only and will be "
                     + f"{password_length_chosen} characters long."
                 )
             else:
@@ -190,7 +198,7 @@ def get_style(password_length_chosen):
         except ValueError:
             print(
                 Fore.LIGHTRED_EX
-                + "\nTry again, please choose 1 or 2."
+                + "\nTry again, please choose 1, 2 or 3."
             )
             print(Style.RESET_ALL)
 
@@ -202,13 +210,16 @@ def create_password(password_style, password_length_chosen):
     previous functions.
     """
     if password_style == 1:
-        # Generate a password with letters only
+        # Generate a password with letters only.
         password = ''.join(
             random.choices(string.ascii_letters, k=password_length_chosen)
         )
-
-    if password_style == 2:
-        # Generate a password with letters, numbers, and symbols
+    elif password_style == 2:
+        # Generate a password with numbers only.
+        password = ''.join(
+            random.choices(string.digits, k=password_length_chosen))
+    elif password_style == 3:
+        # Generate a password with letters, numbers, and symbols.
         password = ''.join(
             random.choices(
                 string.ascii_letters
