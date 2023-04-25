@@ -9,6 +9,8 @@ from colorama import Fore, Style
 import gspread
 from google.oauth2.service_account import Credentials
 
+# Code to wire up Google APIs, credit:
+# Love Sandwiches Walkthrough Project.
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -21,7 +23,6 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("password_manager")
 
 storage = SHEET.worksheet("storage")
-
 data = storage.get_all_values()
 
 
