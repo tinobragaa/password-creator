@@ -33,6 +33,11 @@ def typewriter_print(text, speed=0.03):
     to the console. This function iterates over each character
     in the text, writes it to the console, flushes the buffer,
     and waits 0.03s before continuing to the next character.
+
+    Args:
+    - text (str): The text to be printed.
+    - speed (float): The delay between each character printed.
+    Default is 0.03.
     """
     print(Style.RESET_ALL)
     for character in text:
@@ -70,7 +75,7 @@ def welcome_message():
         + "=============================="
     )
     print(Style.RESET_ALL)
-    time.sleep(.5)
+    time.sleep(2)
     typewriter_print("Welcome to the password creator!")
     typewriter_print(
         "If you need to close the program, just "
@@ -136,7 +141,7 @@ def get_length():
     length as an integer.
 
     Returns:
-        int: The length of the password chosen by the user.
+    - int: The length of the password chosen by the user.
     """
     typewriter_print(
         "Enter your password length, it needs to be "
@@ -178,12 +183,12 @@ def get_style(password_length_chosen):
     function returns the chosen style as an integer.
 
     Args:
-    - password_length_chosen: An integer representing the length of the
-    password.
+    - password_length_chosen: An integer representing the length of
+    the password.
 
     Returns:
-    An integer representing the chosen style:
-    1 for letters only, 2 for numbers only, and 3 for mixed characters.
+    - An integer representing the chosen style: 1 for letters only,
+    2 for numbers only, and 3 for mixed characters.
     """
 
     typewriter_print(
@@ -209,20 +214,20 @@ def get_style(password_length_chosen):
             if password_style == 1:
                 typewriter_print(
                     f"\nHmm, you chose {password_style} so your password "
-                    + "style will contain letters only and \nwill be "
+                    + "style will contain letters only and will be \n"
                     + f"{password_length_chosen} characters long."
                 )
             elif password_style == 2:
                 typewriter_print(
                     f"\nOkey-dokey, you chose {password_style} so your "
-                    + "password will contain numbers only and \nwill be "
+                    + "password will contain numbers only and will \nbe "
                     + f"{password_length_chosen} characters long."
                 )
             else:
                 typewriter_print(
                     f"\nSounds safe, you chose {password_style} so your "
-                    + "password will contain letters, numbers and symbols and "
-                    + f"\nwill be {password_length_chosen} characters long."
+                    + "password will contain letters, numbers \nand symbols "
+                    + f"and will be {password_length_chosen} characters long."
                 )
 
             time.sleep(2.5)
@@ -241,11 +246,11 @@ def create_password(password_style, password_length_chosen):
     This function generate a random password of the specified style and length.
 
     Args:
-        password_style (int): The style of the password to generate.
-        password_length_chosen (int): The length of the password to generate.
+    - password_style (int): The style of the password to generate.
+    - password_length_chosen (int): The length of the password to generate.
 
     Returns:
-        str: A random password of the specified style and length.
+    - str: A random password of the specified style and length.
     """
     if password_style == 1:
         # Generate a password with letters only.
@@ -275,6 +280,9 @@ def display_password(password):
     This function takes a 'password' parameter and displays it to the user
     in a formatted and visually appealing way. It also prompts the user to
     start again or exit the password generator.
+
+    Args:
+    - password (str): The generated password to be displayed.
     """
     clear_terminal()
     typewriter_print("\nYour password is being created...")
@@ -358,8 +366,8 @@ def store_password(password):
     user to enter their username and URL, and appends a new row to the
     spreadsheet with these details and the provided password.
 
-    Parameters:
-    password (str): the generated password to be saved.
+    Args:
+    - password (str): The generated password to be saved.
     """
     clear_terminal()
     print(
@@ -464,8 +472,7 @@ def store_password(password):
 
 def exit_generator():
     """
-    This function prints a warning message and
-    exit the program.
+    This function prints a warning message and exit the program.
     """
     clear_terminal()
     typewriter_print("The program will exit in...")
