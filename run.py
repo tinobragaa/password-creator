@@ -23,7 +23,6 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("password_manager")
 
 storage = SHEET.worksheet("storage")
-data = storage.get_all_values()
 
 
 # Code to create the typewriter effect, credit:
@@ -311,7 +310,7 @@ def display_password(password):
                 time.sleep(1)
                 exit_generator()
             elif save_password in ("y", "Y"):
-                time.sleep(1)
+                time.sleep(2)
                 return True
             elif save_password in ("n", "N"):
                 time.sleep(1)
@@ -354,8 +353,13 @@ def display_password(password):
 
 def store_password(password):
     """
-    This function will save the created password with
-    username and URL in the spreadsheet.
+    This function save the created password along with the corresponding
+    username and URL to a Google Spreadsheet. The function prompts the
+    user to enter their username and URL, and appends a new row to the
+    spreadsheet with these details and the provided password.
+
+    Parameters:
+    password (str): the generated password to be saved.
     """
     clear_terminal()
     print(
@@ -384,8 +388,78 @@ def store_password(password):
         + Style.RESET_ALL
         + "."
     )
-    typewriter_print("Enter your username:")
-    typewriter_print("Enter the URL:")
+
+    typewriter_print("Enter your username:\n")
+
+    while True:
+        try:
+            username = input()
+
+            if username == "exit":
+                time.sleep(1)
+                exit_generator()
+            elif username == "":
+                raise ValueError
+            else:
+                break
+
+        except ValueError:
+            print(
+                Fore.LIGHTRED_EX
+                + "\nTry again, it can't be blank."
+            )
+            print(Style.RESET_ALL)
+
+    typewriter_print("\nEnter the URL:\n")
+
+    while True:
+        try:
+            url = input()
+
+            if url == "exit":
+                time.sleep(1)
+                exit_generator()
+            elif url == "":
+                raise ValueError
+            else:
+                break
+
+        except ValueError:
+            print(
+                Fore.LIGHTRED_EX
+                + "\nTry again, it can't be blank."
+            )
+            print(Style.RESET_ALL)
+
+    new_row = [url, username, password]
+    storage.append_row(new_row)
+    typewriter_print(
+        "\nThe URL, username, and password have been added to our database!"
+    )
+
+    typewriter_print("Would you like to start again? ( Y / N )")
+
+    while True:
+        try:
+            reset = input()
+
+            if reset in ("y", "Y"):
+                time.sleep(1)
+                clear_terminal()
+                os.system("python3 'run.py'")
+            elif reset in ("n", "N", "exit"):
+                time.sleep(1)
+                exit_generator()
+            else:
+                raise ValueError
+            return
+
+        except ValueError:
+            print(
+                Fore.LIGHTRED_EX
+                + "\nTry again, please choose Y or N."
+            )
+            print(Style.RESET_ALL)
 
 
 def exit_generator():
