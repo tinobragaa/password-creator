@@ -87,7 +87,7 @@ def welcome_message():
     typewriter_print("1 - Choose between 8 and 64 characters long.")
     typewriter_print(
         "2 - Choose a password style: letters only, numbers only or mixed "
-        + "characters (letters/numbers/symbols)."
+        + "characters \n(letters/numbers/symbols)."
     )
     typewriter_print(
         "3 - Choose whether you would like to save your password or not."
@@ -140,7 +140,7 @@ def get_length():
     """
     typewriter_print(
         "Enter your password length, it needs to be "
-        + "a number between 8 and 64. The bigger, the safer.\n"
+        + "a number between 8 and 64. \nThe bigger, the safer.\n"
     )
 
     while True:
@@ -188,7 +188,7 @@ def get_style(password_length_chosen):
 
     typewriter_print(
         "Which characters would you like to have in your password? "
-        + "Remember: the more complex the safer!"
+        + "\nRemember: the more complex the safer!"
     )
     typewriter_print("1 - Letters only.")
     typewriter_print("2 - Numbers only.")
@@ -209,20 +209,20 @@ def get_style(password_length_chosen):
             if password_style == 1:
                 typewriter_print(
                     f"\nHmm, you chose {password_style} so your password "
-                    + "style will contain letters only and will be "
+                    + "style will contain letters only and \nwill be "
                     + f"{password_length_chosen} characters long."
                 )
             elif password_style == 2:
                 typewriter_print(
                     f"\nOkey-dokey, you chose {password_style} so your "
-                    + "password will contain numbers only and will be "
+                    + "password will contain numbers only and \nwill be "
                     + f"{password_length_chosen} characters long."
                 )
             else:
                 typewriter_print(
                     f"\nSounds safe, you chose {password_style} so your "
                     + "password will contain letters, numbers and symbols and "
-                    + f"will be {password_length_chosen} characters long."
+                    + f"\nwill be {password_length_chosen} characters long."
                 )
 
             time.sleep(2.5)
@@ -280,7 +280,7 @@ def display_password(password):
     typewriter_print("\nYour password is being created...")
     typewriter_print(
         "\nCounting the number of atoms in the universe... okay, not really, "
-        + "just making sure your password is strong enough..."
+        + "just making \nsure your password is strong enough..."
     )
     time.sleep(.8)
     typewriter_print(
@@ -375,11 +375,11 @@ def store_password(password):
     )
     typewriter_print(
         "A place where you can store your login information with the "
-        + "password you just created!"
+        + "password you just \ncreated!"
     )
     typewriter_print(
         "We just need your username and URL. We'll guard your details "
-        + "so you don't need to worry!"
+        + "so you don't need \nto worry!"
     )
     typewriter_print(
         "The password you created is: "
