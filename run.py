@@ -1,4 +1,34 @@
-# Import necessary modules.
+"""
+These are the modules used in this project:
+
+time: is a Python module that provides various
+time-related functions.
+
+os: is a Python module that provides a way to
+interact with the operating system.
+
+sys: is a Python module that provides access to
+some variables used or maintained by the interpreter.
+
+random: is a Python module that provides functions
+for generating random numbers and sequences.
+
+string: is a Python module that provides various
+string-related functions and constants.
+
+pyfiglet: is a third-party Python package that provides
+a way to generate ASCII art from text.
+
+colorama: is a third-party Python package that provides
+cross-platform support for colored terminal output.
+
+gspread: is a third-party Python package that provides
+a way to interact with Google Sheets.
+
+google.oauth2.service_account: is a Python module provided
+by the google-auth package that provides support for
+authentication using a service account.
+"""
 import time
 import os
 import sys
@@ -21,7 +51,6 @@ CREDS = Credentials.from_service_account_file("creds.json")
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("password_manager")
-
 storage = SHEET.worksheet("storage")
 
 
