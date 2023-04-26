@@ -255,8 +255,8 @@ def get_style(password_length_chosen):
             else:
                 typewriter_print(
                     f"\nSounds safe, you chose {password_style} so your "
-                    + "password will contain letters, numbers and symbols "
-                    + f"and\nwill be {password_length_chosen} characters long."
+                    + "password will contain letters, numbers and\nsymbols "
+                    + f"and will be {password_length_chosen} characters long."
                 )
 
             time.sleep(2.5)
@@ -419,7 +419,7 @@ def store_password(password):
         + "so you don't need \nto worry!"
     )
     typewriter_print(
-        "The password you created is: "
+        "The password you created is:\n"
         + Fore.BLUE
         + f"{password}"
         + Style.RESET_ALL
