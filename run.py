@@ -249,14 +249,14 @@ def get_style(password_length_chosen):
             elif password_style == 2:
                 typewriter_print(
                     f"\nOkey-dokey, you chose {password_style} so your "
-                    + "password will contain numbers only and will \nbe "
+                    + "password will contain numbers only and will be \n"
                     + f"{password_length_chosen} characters long."
                 )
             else:
                 typewriter_print(
                     f"\nSounds safe, you chose {password_style} so your "
-                    + "password will contain letters, numbers \nand symbols "
-                    + f"and will be {password_length_chosen} characters long."
+                    + "password will contain letters, numbers and symbols "
+                    + f"and\nwill be {password_length_chosen} characters long."
                 )
 
             time.sleep(2.5)
