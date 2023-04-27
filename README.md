@@ -179,14 +179,16 @@ Flake8 is a Python library that wraps PyFlakes, pycodestyle and Ned Batchelderâ€
 
 # Bugs
 
-Bug:
-Fix:
+There were many small bugs throughout the process, however, I was able to manage searching online and with my colleague's help. Here are a few that stumped me enough to write them down:
 
-Bug:
-Fix:
+Bug: When I was testing the program, the store_password() was being called two times in a row. I was calling the store_password() from an if statement inside the display_password() and from inside the main() function.
+Fix: I removed the call from within the display_password(.)
 
-Bug:
-Fix:
+Bug: When I was trying to run the display_password() function I was getting a TypeError. I was using a variable called "store_password" and at the same time, I had a function called store_password().
+Fix: I changed the variable name.
+
+Bug: When I was trying to style the terminal interface with CSS and add a few HTML elements I couldn't, the built-in preview couldn't show the same as it was in the deployed version of the project in the Heroku platform. 
+Fix: After a search in the Slack channel I've learned that to open the project in the browser I needed to be able to run the index.js file from the terminal. To achieve I had to install "npm install" to install the node package manager and then "node index.js" to run it.
 
 # Deployment
 

@@ -252,7 +252,7 @@ def get_style(password_length_chosen):
                     + "password will contain letters, numbers and\nsymbols "
                     + f"and will be {password_length_chosen} characters long."
                 )
-            time.sleep(2.5)
+            time.sleep(3)
 
             return password_style
 
