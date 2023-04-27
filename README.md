@@ -120,7 +120,9 @@ The following tools and resources were used to develop the website:
 
 # Testing Cases
 
-# CI Python Linter
+# Python Validation
+
+### CI Python Linter
 
 The project was validated using the provided CI Python Linter and it was cleared with no errors.
 
@@ -128,7 +130,19 @@ The project was validated using the provided CI Python Linter and it was cleared
 <summary>CI Python Linter Validation</summary>
 <br>
 
-![CI Python Linter Validation](path)
+![CI Python Linter Validation](docs/python-validation.jpg)
+
+</details>
+
+### Flake8
+
+Flake8 is a Python library that wraps PyFlakes, pycodestyle and Ned Batchelder’s McCabe script. It is a great toolkit for checking your code base against coding style (PEP8), programming errors (like “library imported but unused” and “Undefined name”) and to check cyclomatic complexity. No program passed without any errors. 
+
+<details>
+<summary>Flake8 Python Validation</summary>
+<br>
+
+![Flake8 Python Validation](docs/flake8-validation.jpg)
 
 </details>
 
@@ -199,9 +213,9 @@ To contribute or check the code yourself, you can fork or clone the repository a
 * [Checking User's Input](https://pynative.com/python-check-user-input-is-number-or-string/#:~:text=Use%20string%20isdigit()%20method,number%2C%20it%20will%20not%20work.)
 * [Typing Effect](https://stackoverflow.com/questions/20302331/typing-effect-in-python)
 * [How to Clear Terminal](https://www.codingninjas.com/codestudio/library/how-to-clear-a-screen-in-python)
-* [How to Use if not Statements](https://stackoverflow.com/questions/10406130/check-if-something-is-not-in-a-list-in-python)
-- GitHub Repositories.
-- Love Sandwiches Project.
+* [How to Use "if not" Statements](https://stackoverflow.com/questions/10406130/check-if-something-is-not-in-a-list-in-python)
+* GitHub Repositories.
+* Love Sandwiches Project.
 
 ### Imported Modules
 
