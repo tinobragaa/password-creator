@@ -6,7 +6,7 @@ Password Creator is a
 
 ![Mockup image]()
 
-[Live Website]()
+[Live Website](https://password-creatorr.herokuapp.com/)
 
 # Table of Contents
 
@@ -85,11 +85,21 @@ Brief description.
 
 </details>
 
+# Future Features
+
+1. Add the ability to generate multiple passwords at once.
+2. Allow users to choose specific symbols or special characters to include in their passwords.
+3. Add a feature to check if the password is strong enough, based on common password criteria such as length, complexity, and uniqueness.
+4. Implement a secure random number generator, such as the 'secrets* module, for generating passwords.
+5. Consider adding an option for the user to enter their own passphrase, which the program can convert into a password using a hashing algorithm.
+
 # Technologies Used
 
 ### Language
 The following language were used to develop the website:
 - Python
+- HTML
+- CSS
 
 ### Tools and Resources
 The following tools and resources were used to develop the website:
@@ -97,6 +107,7 @@ The following tools and resources were used to develop the website:
 - Github
 - Gitpod
 - Google
+- Heroku
 - Favicon
 - Lucidchart
 - Codecademy
@@ -134,7 +145,7 @@ Fix:
 
 # Deployment
 
-[Click Here To See The Live Website]()
+[Click Here To See The Live Website](https://password-creatorr.herokuapp.com/)
 
 ### Deploy
 The website was deployed through the use of GitHub Pages, a feature built in to GitHub. This can be done by following the steps below.
@@ -181,23 +192,35 @@ To contribute or check the code yourself, you can fork or clone the repository a
 
 # Credits
 
-### A list of references and tutorials used for the site:
+### A list of references and tutorials used for the project:
 
-* []()
-- Love Sandwiches Project
+* [Password Generator Tutorial 1](https://www.geeksforgeeks.org/create-a-random-password-generator-using-python/)
+* [How to Create Random Strings](https://favtutor.com/blogs/create-random-string-password-python)
+* [Checking User's Input](https://pynative.com/python-check-user-input-is-number-or-string/#:~:text=Use%20string%20isdigit()%20method,number%2C%20it%20will%20not%20work.)
+* [Typing Effect](https://stackoverflow.com/questions/20302331/typing-effect-in-python)
+* [How to Clear Terminal](https://www.codingninjas.com/codestudio/library/how-to-clear-a-screen-in-python)
+* [How to Use if not Statements](https://stackoverflow.com/questions/10406130/check-if-something-is-not-in-a-list-in-python)
+- GitHub Repositories.
+- Love Sandwiches Project.
 
-### Imported Libraries
+### Imported Modules
 
--
--
--
--
+* [time](https://docs.python.org/3/library/time.html)
+* [os](https://docs.python.org/3/library/os.html?highlight=os#module-os)
+* [sys](https://docs.python.org/3/library/sys.html?highlight=sys#module-sys)
+* [random](https://docs.python.org/3/library/random.html)
+* [string](https://docs.python.org/3/library/string.html?highlight=string#module-string)
+* [google-auth](https://google-auth.readthedocs.io/en/master/)
+* [colorama](https://pypi.org/project/colorama/)
+* [pyfiglet](https://pypi.org/project/pyfiglet/0.7/)
+* [gspread](https://docs.gspread.org/en/v5.7.1/)
+* [flake8](https://flake8.pycqa.org/en/latest/)
 
 # Acknowledgements
 
 I would like to take this opportunity to acknowledge and thank the following people:
 
-- 
--
--
--
+- Bethany and Kim from Code Institute Studen Care for looking out for me.
+- Brian O'Hare my mentor for all the help and guidance.
+- My sister who's always encouraging me.
+- My husband who's there when I need him and is always pushing me forward.
