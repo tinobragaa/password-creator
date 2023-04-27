@@ -24,6 +24,39 @@
     <style>
         body {
             font-family: Arial;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: auto;
+            height: 100vh;
+            background-color: black;
+            background-image: url("https://i.imgur.com/FGkAtgH.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 10px 0;
+            height: 50px;
+            width: 190px;
+            background-color: #fff;
+            border: 2px solid #000;
+            border-radius: 8px;
+        }
+
+        a {
+            font-size: 250%;
+            color: #000000;
+            margin: 0 10px;
+        }
+
+        a:hover {
+            text-shadow: 0 0 2px #000;
         }
 
         /**
@@ -170,17 +203,19 @@
         button {
             width: 200px;
             height: 40px;
-            background-color: #ffffff;
-            border: 2px solid #000000;
-            color: #000000;
+            background-color: #fff;
+            border: 2px solid #000;
+            color: #000;
             text-transform: uppercase;
-            margin: 10px;
+            margin: 100px 10px 30px;
             border-radius: 8px;
+            cursor: pointer;
         }
 
         button:hover {
-            background-color: #000000;
-            color: #ffffff;
+            background-color: #000;
+            color: #fff;
+            border: 2px solid #000000;
         }
     </style>
 </head>

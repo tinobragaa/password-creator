@@ -6,33 +6,44 @@
         <link rel="icon" type="image/png" href="https://i.imgur.com/8kAL2dJ.png">
     </head>
     <body>
-        <main>
-            <!-- Button. -->
-            <button onclick="window.location.reload()">Run Program</button>
-            <!-- Terminal. -->
-            <div id="terminal"></div>
-            <script>
-                var term = new Terminal({
-                    cols: 80,
-                    rows: 32
-                });
-                term.open(document.getElementById('terminal'));
-                term.writeln('Running startup command: python3 run.py');
-                term.writeln('');
-        
-                var ws = new WebSocket(location.protocol.replace('http', 'ws') + '//' + location.hostname + (location.port ? (
-                    ':' + location.port) : '') + '/');
-        
-                ws.onopen = function () {
-                    new attach.attach(term, ws);
-                };
-        
-                ws.onerror = function (e) {
-                    console.log(e);
-                };
-                // Set focus in the terminal
-                document.getElementsByClassName("xterm-helper-textarea")[0].focus();
-            </script>
-        </main>
+         <!-- Button. -->
+         <button onclick="window.location.reload()">Run Program</button>
+         <!-- Terminal. -->
+         <div id="terminal"></div>
+         <!-- Footer. -->
+         <footer>
+            <div>
+                <a href="https://github.com/tinobragaa" target="_blank" rel="noopener" aria-label="Author's GitHub page (link opens in a new tab)">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.linkedin.com/in/valentinobragaa/" target="_blank" rel="noopener" aria-label="Author's LinkedIn page (link opens in a new tab)">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </footer>
+         <script>
+             var term = new Terminal({
+                 cols: 80,
+                 rows: 32
+             });
+             term.open(document.getElementById('terminal'));
+             term.writeln('Running startup command: python3 run.py');
+             term.writeln('');
+     
+             var ws = new WebSocket(location.protocol.replace('http', 'ws') + '//' + location.hostname + (location.port ? (
+                 ':' + location.port) : '') + '/');
+     
+             ws.onopen = function () {
+                 new attach.attach(term, ws);
+             };
+     
+             ws.onerror = function (e) {
+                 console.log(e);
+             };
+             // Set focus in the terminal
+             document.getElementsByClassName("xterm-helper-textarea")[0].focus();
+         </script>
     </body>
 </html>
