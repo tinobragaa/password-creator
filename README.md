@@ -3,9 +3,10 @@
 
 Password Creator is a program that generates a unique and random password for the user based on their desired specifications. The user is prompted to select a password length and choose from three different styles: letter only, numbers only, or mixed (letters, numbers, and symbols). Once the user has selected their preferred options, the program generates a random password and if the user wishes, they can save the generated password along with a corresponding URL and username in a Google spreadsheet. This program provides a convenient and secure way for users to generate strong passwords and save them in a centralized location for easy access.
 
-![Mockup image]()
+![Mockup image](docs/validation/mockup-image.jpg)
 
 [Live Website](https://password-creatorr.herokuapp.com/)
+<br>
 [Google Sheet](https://docs.google.com/spreadsheets/d/131mYKUrBYmHf_NzeRnV3dqDWoZ_dvIrwJPw3xEucOAg/edit?usp=sharing)
 
 # Table of Contents
@@ -182,16 +183,16 @@ Flake8 is a Python library that wraps PyFlakes, pycodestyle and Ned Batchelderâ€
 
 There were many small bugs throughout the process, however, I was able to manage searching online and with my colleague's help. Here are a few that stumped me enough to write them down:
 
-- Bug: When I was testing the program, the store_password() was being called two times in a row. I was calling the store_password() from an if statement inside the display_password() and from inside the main() function.
-
+Bug: When I was testing the program, the store_password() was being called two times in a row. I was calling the store_password() from an if statement inside the display_password() and from inside the main() function.
+<br>
 Fix: I removed the call from within the display_password(.)
 
-- Bug: When I was trying to run the display_password() function I was getting a TypeError. I was using a variable called "store_password" and at the same time, I had a function called store_password().
-
+Bug: When I was trying to run the display_password() function I was getting a TypeError. I was using a variable called "store_password" and at the same time, I had a function called store_password().
+<br>
 Fix: I changed the variable name.
 
-- Bug: When I was trying to style the terminal interface with CSS and add a few HTML elements I couldn't, the built-in preview couldn't show the same as it was in the deployed version of the project in the Heroku platform. 
-
+Bug: When I was trying to style the terminal interface with CSS and add a few HTML elements I couldn't, the built-in preview couldn't show the same as it was in the deployed version of the project in the Heroku platform. 
+<br>
 Fix: After a search in the Slack channel I've learned that to open the project in the browser I needed to be able to run the index.js file from the terminal. To achieve I had to install "npm install" to install the node package manager and then "node index.js" to run it.
 
 # Deployment
