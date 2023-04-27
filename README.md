@@ -15,44 +15,47 @@ Password Creator is a
 ## Business Goals
 
 ### User Goals
-- Find an interactive way to learn
-- Clear rules and easy access to it
-- Possibility to restart the game
-- See if their answer is right or wrong
-- Access to their score
-- Different questions for new entries
+- Find an interactive way to run the program.
+- Clear rules and easy access to it.
+- Possibility to exit the app.
+- Possibility to create unique and random passwords.
+- Possibility to store their login information.
 
 ### Website Owner Goals
-- Deliver easy-to-read quizzes to test user's knowledge
-- Provide a range of questions to increase the dynamic
-- To provide a fully responsive quiz that can be played on a range of devices
+- Deliver easy-to-read rules to attract users.
+- Provide a range of possibilities to style passwords.
+- To provide a database where the users can store their information.
 
 ### Target Audience
-- New software developers
-- Coding students
-- Programming professional's in general
+- Organizations of all sizes that require secure access to their systems and networks. 
+- Anyone who's looking to create safe passwords.
+- Anyone who's looking to create and store login information.
 
 ### User Expectations
-- Smooth and playable quiz
-- Appealing design
-- Accessibility
+- Smooth experience.
+- Intuitive interface.
+- Appealing design.
 
 ## User Stories
 
 ### First-Time User
-1. As a first-time user, I want to understand the rules
-2. As a first-time user, I want to see if my answer is correct or incorrect
-3. As a first-time user, I want to be able to restart the quiz
+1. As a first-time user, I want to understand how the program works.
+2. As a first-time user, I want to create a unique password.
+3. As a first-time user, I want to have style options when creating the password.
+4. As a first-time user, I want to exit the program at any given time.
 
 ### Returning User
-1. As a returning user, I want to different questions
-2. As a returning user, I want to improve my knowledge of JS
-3. As a returning user, I want to have fun in a well designed game
+1. As a returning user, I want to be able to save my password.
+2. As a returning user, I want to have the possibility of creating different passwords.
+3. As a returning user, I want to save my password with my login information.
+4. As a returning user, I want to save my password with my login information.
 
 ### Site Owner
-1. As a site owner, I want users to easily understand my project
-2. As a site owner, I want users to enjoy and learn at the same time
-3. As a site owner, I want ways to have an easy and good experience throughout the quiz
+1. As a site owner, I want users to easily understand my software.
+2. As a site owner, I want users to create different passwords.
+3. As a site owner, I want users to feel safe.
+4. As a site owner, I want users to be able to store their login information.
+5. As a site owner, I want users to be able to exit whenever they want to.
 
 # Flowchart
 
