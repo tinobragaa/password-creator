@@ -135,19 +135,14 @@ def welcome_message():
 
             if user_name == "exit":
                 exit_generator()
-
             elif user_name == "":
                 raise ValueError("name cannot be blank.")
-
             elif user_name.isdigit():
                 raise ValueError("letters only.")
-
             elif len(user_name) < 3:
                 raise ValueError("a minimum of 3 characters.")
-
             elif len(user_name) > 16:
                 raise ValueError("a maximum of 16 characters.")
-
             else:
                 typewriter_print(
                     f"\nHi {user_name}, let's make your unique password!"
@@ -231,7 +226,6 @@ def get_style(password_length_chosen):
     while True:
         try:
             password_style = input()
-
             if password_style == "exit":
                 exit_generator()
             else:
@@ -258,8 +252,8 @@ def get_style(password_length_chosen):
                     + "password will contain letters, numbers and\nsymbols "
                     + f"and will be {password_length_chosen} characters long."
                 )
-
             time.sleep(2.5)
+
             return password_style
 
         except ValueError:
@@ -342,7 +336,6 @@ def display_password(password):
     while True:
         try:
             save_password = input()
-
             if save_password == "exit":
                 time.sleep(1)
                 exit_generator()
@@ -368,7 +361,6 @@ def display_password(password):
     while True:
         try:
             reset = input()
-
             if reset in ("y", "Y"):
                 time.sleep(1)
                 clear_terminal()
@@ -429,42 +421,46 @@ def store_password(password):
     typewriter_print("Enter your username:\n")
 
     while True:
+        username = ""
         try:
             username = input()
-
             if username == "exit":
                 time.sleep(1)
                 exit_generator()
             elif username == "":
-                raise ValueError
+                raise ValueError("username cannot be blank.")
+            elif len(username) < 3:
+                raise ValueError("a minimum of 3 characters.")
             else:
                 break
 
-        except ValueError:
+        except ValueError as error:
             print(
                 Fore.LIGHTRED_EX
-                + "\nTry again, it can't be blank."
+                + f"\nTry again, {error}"
             )
             print(Style.RESET_ALL)
 
     typewriter_print("\nEnter the URL:\n")
 
     while True:
+        url = ""
         try:
             url = input()
-
             if url == "exit":
                 time.sleep(1)
                 exit_generator()
             elif url == "":
-                raise ValueError
+                raise ValueError("username cannot be blank.")
+            elif len(url) < 3:
+                raise ValueError("a minimum of 3 characters.")
             else:
                 break
 
-        except ValueError:
+        except ValueError as error:
             print(
                 Fore.LIGHTRED_EX
-                + "\nTry again, it can't be blank."
+                + f"\nTry again, {error}"
             )
             print(Style.RESET_ALL)
 
