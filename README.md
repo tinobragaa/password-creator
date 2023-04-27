@@ -90,7 +90,7 @@ Brief description.
 1. Add the ability to generate multiple passwords at once.
 2. Allow users to choose specific symbols or special characters to include in their passwords.
 3. Add a feature to check if the password is strong enough, based on common password criteria such as length, complexity, and uniqueness.
-4. Implement a secure random number generator, such as the 'secrets* module, for generating passwords.
+4. Implement a secure random number generator, such as the "secrets" module, for generating passwords.
 5. Consider adding an option for the user to enter their own passphrase, which the program can convert into a password using a hashing algorithm.
 
 # Technologies Used
@@ -130,19 +130,19 @@ The project was validated using the provided CI Python Linter and it was cleared
 <summary>CI Python Linter Validation</summary>
 <br>
 
-![CI Python Linter Validation](docs/python-validation.jpg)
+![CI Python Linter Validation](docs/validation/python-validation.jpg)
 
 </details>
 
 ### Flake8
 
-Flake8 is a Python library that wraps PyFlakes, pycodestyle and Ned Batchelder’s McCabe script. It is a great toolkit for checking your code base against coding style (PEP8), programming errors (like “library imported but unused” and “Undefined name”) and to check cyclomatic complexity. No program passed without any errors. 
+Flake8 is a Python library that wraps PyFlakes, pycodestyle and Ned Batchelder’s McCabe script. It is a great toolkit for checking your code base against coding style (PEP8), programming errors (like “library imported but unused” and “Undefined name”) and to check cyclomatic complexity. The program passed without any errors. 
 
 <details>
 <summary>Flake8 Python Validation</summary>
 <br>
 
-![Flake8 Python Validation](docs/flake8-validation.jpg)
+![Flake8 Python Validation](docs/validation/flake8-validation.jpg)
 
 </details>
 
