@@ -119,6 +119,38 @@ The following tools and resources were used to develop the website:
 
 # Testing Cases
 
+# HTML Validation
+
+The Nu HTML Checker (W3C) is used to validate HTML documents. The files passed without any errors.
+
+<details>
+<summary>index.html Validation</summary>
+<br>
+
+![index.html Validation](docs/validation/index-validation.jpg)
+
+</details>
+
+<details>
+<summary>layout.html Validation</summary>
+<br>
+
+![layout.html Validation](docs/validation/layout-validation.jpg)
+
+</details>
+
+# CSS Validation
+
+The W3C Jigsaw CSS Validation Service is used to validate CSS documents. The file passed without any errors.
+
+<details>
+<summary>CSS Validation</summary>
+<br>
+
+![CSS Validation](docs/validation/css-validation.jpg)
+
+</details>
+
 # Python Validation
 
 ### CI Python Linter
