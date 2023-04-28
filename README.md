@@ -10,6 +10,48 @@ Password Creator is a program that generates a unique and random password for th
 [Google Sheet](https://docs.google.com/spreadsheets/d/131mYKUrBYmHf_NzeRnV3dqDWoZ_dvIrwJPw3xEucOAg/edit?usp=sharing)
 
 # Table of Contents
+- [Password Creator](#password-creator)
+- [Table of Contents](#table-of-contents)
+- [User Experience (UX)](#user-experience--ux-)
+  * [Business Goals](#business-goals)
+    + [User Goals](#user-goals)
+    + [Website Owner Goals](#website-owner-goals)
+    + [Target Audience](#target-audience)
+    + [User Expectations](#user-expectations)
+  * [User Stories](#user-stories)
+    + [First-Time User](#first-time-user)
+    + [Returning User](#returning-user)
+    + [Site Owner](#site-owner)
+- [Flowchart](#flowchart)
+- [Features](#features)
+    + [Start Interface](#start-interface)
+    + [Get Length/Style Interface](#get-length-style-interface)
+    + [Display Password Interface](#display-password-interface)
+    + [Password Manager Interface](#password-manager-interface)
+    + [Exit Interface](#exit-interface)
+    + [Google Sheet](#google-sheet)
+- [Future Features](#future-features)
+- [Technologies Used](#technologies-used)
+    + [Language](#language)
+    + [Tools and Resources](#tools-and-resources)
+- [Testing Cases](#testing-cases)
+    + [User Stories](#user-stories-1)
+    + [Validation](#validation)
+- [HTML Validation](#html-validation)
+- [CSS Validation](#css-validation)
+- [Python Validation](#python-validation)
+    + [CI Python Linter](#ci-python-linter)
+    + [Flake8](#flake8)
+- [Bugs](#bugs)
+- [Deployment](#deployment)
+    + [Deploy](#deploy)
+    + [Fork](#fork)
+    + [Clone](#clone)
+    + [Heroku](#heroku)
+- [Credits](#credits)
+    + [A list of references and tutorials used for the project:](#a-list-of-references-and-tutorials-used-for-the-project-)
+    + [Imported Modules](#imported-modules)
+- [Acknowledgements](#acknowledgements)
 
 # User Experience (UX)
 
@@ -297,6 +339,7 @@ I designed the following flowchart using Lucid charts to grasp the necessary ste
 ### Google Sheet
 - Every password save is loaded to the google spread sheet.
 <br>
+
 [Check Google Sheet Link](https://docs.google.com/spreadsheets/d/131mYKUrBYmHf_NzeRnV3dqDWoZ_dvIrwJPw3xEucOAg/edit?usp=sharing)
 
 <details>
