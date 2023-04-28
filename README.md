@@ -60,7 +60,7 @@ Password Creator is a program that generates a unique and random password for th
 
 # Flowchart
 
-Brief description.
+I designed the following flowchart using Lucid charts to grasp the necessary steps involved in developing the program.
 
 <details>
 <summary>Start Interface Wireframe</summary>
@@ -72,17 +72,225 @@ Brief description.
 
 # Features
 
-Brief description.
-
-### Feature Name
-- 
-- 
-- 
+### Start Interface
+- Appealing design, abstract patterns in the background image to reference a database;
+- Centralized terminal and button for better experience;
+- Social media links icons (GitHub/LinkedIn);
+- Button hover effect;
+- Icons hover effect;
+- Program apresentation/logo, how-it-works text, user input, input validation and input confirmation.
 <details>
-<summary></summary>
+<summary>Start Interface</summary>
 <br>
 
-![F.N.](path)
+![Start Interface](docs/images/beginning-interface.jpg)
+
+</details>
+<details>
+<summary>Logo - Apresentation</summary>
+<br>
+
+![Logo - Apresentation](docs/images/beginning-logo.jpg)
+
+</details>
+<details>
+<summary>How-It-Works Text</summary>
+<br>
+
+![How-It-Works Text](docs/images/beginning-text.jpg)
+
+</details>
+<details>
+<summary>Name's Input Validation</summary>
+<br>
+
+![Name's Input Validation](docs/images/beginning-validation.jpg)
+
+</details>
+<details>
+<summary>User Name's Input Confirmation</summary>
+<br>
+
+![User Name's Input Confirmation](docs/images/name-input-confirmation.jpg)
+
+</details>
+<details>
+<summary>Button Hover Effect</summary>
+<br>
+
+![Button Hover Effect](docs/images/button-hover.jpg)
+
+</details>
+<details>
+<summary>Links Hover Effect</summary>
+<br>
+
+![Links Hover Effect](docs/images/links-hover.jpg)
+
+</details>
+
+### Get Length/Style Interface
+- Prompt the user for the password length: a number between 8-64;
+- Prompt the user for the password style: letters only, numbers only or mixed charecters (letters/numbers/symbols);
+- Confirmation text for every inputs;
+- Different answers for every chosen style;
+- Input validation.
+
+<details>
+<summary>Length/Style Interface</summary>
+<br>
+
+![Length/Style Interface](docs/images/length-style-text.jpg)
+
+</details>
+<details>
+<summary>Length's Input Confirmation</summary>
+<br>
+
+![Length's Input Confirmation](docs/images/input-confirmation.jpg)
+
+</details>
+<details>
+<summary>Length's Input Validation</summary>
+<br>
+
+![Length's Input Validation](docs/images/length-input-validation.jpg)
+
+</details>
+<details>
+<summary>Letters Only Confirmation</summary>
+<br>
+
+![Letters Only Confirmation](docs/images/style-one.jpg)
+
+</details>
+<details>
+<summary>Numbers Only Confirmation</summary>
+<br>
+
+![Numbers Only Confirmation](docs/images/style-two.jpg)
+
+</details>
+<details>
+<summary>Mixed Characters Confirmation</summary>
+<br>
+
+![Mixed Characters Confirmation](docs/images/style-three.jpg)
+
+</details>
+<details>
+<summary>Style's Input Validation</summary>
+<br>
+
+![Style's Input Validation](docs/images/style-validation.jpg)
+
+</details>
+
+### Display Password Interface
+- Tech jokes for good user experience;
+- Password displayed in different color for positive feeling;
+- Prompt the user if they want to save;
+- Prompt the user if they want to restart or exit;
+- Input validation.
+
+<details>
+<summary>Display Password Interface</summary>
+<br>
+
+![Display Password Interface](docs/images/display-password-interface.jpg)
+
+</details>
+<details>
+<summary>Password Highlighted</summary>
+<br>
+
+![Password Highlighted](docs/images/password-highlight.jpg)
+
+</details>
+<details>
+<summary>Save Input Validation</summary>
+<br>
+
+![Save Input Validation](docs/images/save-validation.jpg)
+
+</details>
+<details>
+<summary>Restart/Exit Input Validation</summary>
+<br>
+
+![Restart/Exit Input Validation](docs/images/try-again-validation.jpg)
+
+</details>
+
+### Password Manager Interface
+- An interface where the user can save login information into google spreadsheet;
+- Small apresentation and how-it-works;
+- Password reminder highlighted;
+- Prompt user for username;
+- Prompt user for URL;
+- Saved login information to the database confirmation;
+- Prompt the user if wants to start again or exit.
+
+<details>
+<summary>Password Manager Interface</summary>
+<br>
+
+![Password Manager Interface](docs/images/manager-interface.jpg)
+
+</details>
+<details>
+<summary>Login Saved Confirmation</summary>
+<br>
+
+![Login Saved Confirmation](docs/images/login-info-confirmation.jpg)
+
+</details>
+<details>
+<summary>Password Reminder</summary>
+<br>
+
+![Password Reminder](docs/images/password-reminder.jpg)
+
+</details>
+<details>
+<summary>Username/URL Input Validation</summary>
+<br>
+
+![Username/URL Input Validation](docs/images/login-inputs-validation.jpg)
+
+</details>
+<details>
+<summary>Restart/Exit Input Validation</summary>
+<br>
+
+![Restart/Exit Input Validation](docs/images/final-question-validation.jpg)
+
+</details>
+
+### Exit Interface
+- At every input, the user can type "exit" which leads to this interface;
+- There's a timer for good user experience;
+- Once the timer is finished, it clears the terminal.
+
+<details>
+<summary>Exit Interface</summary>
+<br>
+
+![Exit Interface](docs/images/exit-interface.jpg)
+
+</details>
+<details>
+<summary>Exit Instruction</summary>
+<br>
+
+![Exit Instruction](docs/images/exit-instruction.jpg)
+
+</details>
+<details>
+<summary>Program Closed</summary>
+<br>
+
+![Program Closed](docs/images/exited-interface.jpg)
 
 </details>
 
