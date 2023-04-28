@@ -601,7 +601,7 @@ To contribute or check the code yourself, you can fork or clone the repository a
 
 ### A list of references and tutorials used for the project:
 
-* [Password Generator Tutorial 1](https://www.geeksforgeeks.org/create-a-random-password-generator-using-python/)
+* [Password Generator Tutorial](https://www.geeksforgeeks.org/create-a-random-password-generator-using-python/)
 * [How to Create Random Strings](https://favtutor.com/blogs/create-random-string-password-python)
 * [Checking User's Input](https://pynative.com/python-check-user-input-is-number-or-string/#:~:text=Use%20string%20isdigit()%20method,number%2C%20it%20will%20not%20work.)
 * [Typing Effect](https://stackoverflow.com/questions/20302331/typing-effect-in-python)
