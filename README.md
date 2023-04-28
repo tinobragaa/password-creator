@@ -338,7 +338,6 @@ I designed the following flowchart using Lucid charts to grasp the necessary ste
 
 ### Google Sheet
 - Every password save is loaded to the google spread sheet.
-<br>
 
 [Check Google Sheet Link](https://docs.google.com/spreadsheets/d/131mYKUrBYmHf_NzeRnV3dqDWoZ_dvIrwJPw3xEucOAg/edit?usp=sharing)
 

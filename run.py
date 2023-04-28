@@ -108,7 +108,7 @@ def welcome_message():
     typewriter_print("Welcome to the password creator!")
     typewriter_print(
         "If you need to close the program, just "
-        + "type exit."
+        + "type exit at any time."
     )
     typewriter_print(
         "Did you know it only takes seconds to hack "
@@ -383,8 +383,8 @@ def display_password(password):
 def store_password(password):
     """
     This function save the created password along with the corresponding
-    username and URL to a Google Spreadsheet. The function prompts the
-    user to enter their username and URL, and appends a new row to the
+    username and URL/Name to a Google Spreadsheet. The function prompts the
+    user to enter their username and URL/Name, and appends a new row to the
     spreadsheet with these details and the provided password.
 
     Args:
@@ -407,7 +407,7 @@ def store_password(password):
         + "password you just \ncreated!"
     )
     typewriter_print(
-        "We just need your username and URL. We'll guard your details "
+        "We just need your username and URL/Name. We'll guard your details "
         + "so you don't need \nto worry!"
     )
     typewriter_print(
@@ -441,7 +441,7 @@ def store_password(password):
             )
             print(Style.RESET_ALL)
 
-    typewriter_print("\nEnter the URL:\n")
+    typewriter_print("\nEnter the URL/Name:\n")
 
     while True:
         url = ""
@@ -467,7 +467,7 @@ def store_password(password):
     new_row = [url, username, password]
     storage.append_row(new_row)
     typewriter_print(
-        "\nThe URL, username, and password have been added to our database!"
+        "\nThe URL/Name, username, and password have been added to our database!"
     )
 
     typewriter_print("Would you like to start again? ( Y / N )")
