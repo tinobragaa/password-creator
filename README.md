@@ -74,11 +74,11 @@ I designed the following flowchart using Lucid charts to grasp the necessary ste
 
 ### Start Interface
 - Appealing design, abstract patterns in the background image to reference a database;
-- Centralized terminal and button for better experience;
+- Centralized terminal and button for a better experience;
 - Social media links icons (GitHub/LinkedIn);
 - Button hover effect;
 - Icons hover effect;
-- Program apresentation/logo, how-it-works text, user input, input validation and input confirmation.
+- Program presentation/logo, how-it-works text, user input, input validation and input confirmation.
 <details>
 <summary>Start Interface</summary>
 <br>
@@ -87,17 +87,17 @@ I designed the following flowchart using Lucid charts to grasp the necessary ste
 
 </details>
 <details>
-<summary>Logo - Apresentation</summary>
+<summary>Logo Presentation</summary>
 <br>
 
-![Logo - Apresentation](docs/images/beginning-logo.jpg)
+![Logo Presentation](docs/images/beginning-logo.jpg)
 
 </details>
 <details>
-<summary>How-It-Works Text</summary>
+<summary>How It Works Text</summary>
 <br>
 
-![How-It-Works Text](docs/images/beginning-text.jpg)
+![How It Works Text](docs/images/beginning-text.jpg)
 
 </details>
 <details>
@@ -131,8 +131,8 @@ I designed the following flowchart using Lucid charts to grasp the necessary ste
 
 ### Get Length/Style Interface
 - Prompt the user for the password length: a number between 8-64;
-- Prompt the user for the password style: letters only, numbers only or mixed charecters (letters/numbers/symbols);
-- Confirmation text for every inputs;
+- Prompt the user for the password style: letters only, numbers only or mixed characters (letters/numbers/symbols);
+- Confirmation text for every input;
 - Different answers for every chosen style;
 - Input validation.
 
@@ -188,7 +188,7 @@ I designed the following flowchart using Lucid charts to grasp the necessary ste
 
 ### Display Password Interface
 - Tech jokes for good user experience;
-- Password displayed in different color for positive feeling;
+- The password displayed in a different color for positive feelings;
 - Prompt the user if they want to save;
 - Prompt the user if they want to restart or exit;
 - Input validation.
@@ -224,7 +224,7 @@ I designed the following flowchart using Lucid charts to grasp the necessary ste
 
 ### Password Manager Interface
 - An interface where the user can save login information into google spreadsheet;
-- Small apresentation and how-it-works;
+- Small presentation and how it works;
 - Password reminder highlighted;
 - Prompt user for username;
 - Prompt user for URL;
@@ -273,13 +273,6 @@ I designed the following flowchart using Lucid charts to grasp the necessary ste
 - Once the timer is finished, it clears the terminal.
 
 <details>
-<summary>Exit Interface</summary>
-<br>
-
-![Exit Interface](docs/images/exit-interface.jpg)
-
-</details>
-<details>
 <summary>Exit Instruction</summary>
 <br>
 
@@ -287,10 +280,29 @@ I designed the following flowchart using Lucid charts to grasp the necessary ste
 
 </details>
 <details>
+<summary>Exit Interface</summary>
+<br>
+
+![Exit Interface](docs/images/exit-interface.jpg)
+
+</details>
+<details>
 <summary>Program Closed</summary>
 <br>
 
 ![Program Closed](docs/images/exited-interface.jpg)
+
+</details>
+
+### Google Sheet
+- Every password save is loaded to the google spread sheet.
+[Check Google Sheet Link](https://docs.google.com/spreadsheets/d/131mYKUrBYmHf_NzeRnV3dqDWoZ_dvIrwJPw3xEucOAg/edit?usp=sharing)
+
+<details>
+<summary>Google Sheet</summary>
+<br>
+
+![Google Sheet](docs/images/google-sheet.jpg)
 
 </details>
 
@@ -328,6 +340,80 @@ The following tools and resources were used to develop the website:
 - GitHub Wiki TOC generator
 
 # Testing Cases
+
+### Validation
+
+| **Feature**                | **Expectation**                                                                             | **Action**                                                                              | **Result**                                                                                  |
+|----------------------------|---------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| **Enter your name:**       |                                                                                             |                                                                                         |                                                                                             |
+| Invalid                    | Invalid answer message is displayed and user prompter to enter valid answer                 | Empty string                                                                            | Invalid answer message is displayed and user prompter to enter valid answer                 |
+| Invalid                    | Invalid answer message is displayed and user prompter to enter valid answer                 | Numbers                                                                                 | Invalid answer message is displayed and user prompter to enter valid answer                 |
+| Invalid                    | Invalid answer message is displayed and user prompter to enter valid answer                 | input < 3 characters                                                                    | Invalid answer message is displayed and user prompter to enter valid answer                 |
+| Invalid                    | Invalid answer message is displayed and user prompter to enter valid answer                 | input > 16 characters                                                                   | Invalid answer message is displayed and user prompter to enter valid answer                 |
+| Valid                      | Loads the choose length/style interface                                                     | Input filled with a word without numbers, longer than 3 and shorter than 16 characters. | Loads the choose length/style interface                                                     |
+| **Enter password length:** |                                                                                             |                                                                                         |                                                                                             |
+| Invalid                    | Invalid answer message is displayed and user prompter to enter valid answer                 | input < 8 or input > 64                                                                 | Invalid answer message is displayed and user prompter to enter valid answer                 |
+| Valid                      | Prompts the next question: choose a style                                                   | input >= 8 and input <= 64                                                              | Prompts the next question: choose a style                                                   |
+| **Choose password style:** |                                                                                             |                                                                                         |                                                                                             |
+| Invalid                    | Invalid answer message is displayed and user prompter to enter valid answer                 | input != 1, 2 or 3                                                                      | Invalid answer message is displayed and user prompter to enter valid answer                 |
+| Valid                      | Loads the display password interface                                                        | input = 1, 2 or 3                                                                       | Loads the display password interface                                                        |
+| **Save password?**         |                                                                                             |                                                                                         |                                                                                             |
+| Invalid                    | Invalid answer message is displayed and user prompter to enter valid answer                 | input != "y", "Y", "n" or "N"                                                           | Invalid answer message is displayed and user prompter to enter valid answer                 |
+| Valid                      | If "y" or "Y" prompts store password interface, if "n" or "N" prompts restart/exit question | input = "y", "Y", "n" or "N"                                                            | If "y" or "Y" prompts store password interface, if "n" or "N" prompts restart/exit question |
+| **Enter username:**        |                                                                                             |                                                                                         |                                                                                             |
+| Invalid                    | Invalid answer message is displayed and user prompter to enter valid answer                 | empty input                                                                             | Invalid answer message is displayed and user prompter to enter valid answer                 |
+| Invalid                    | Invalid answer message is displayed and user prompter to enter valid answer                 | input < 3                                                                               | Invalid answer message is displayed and user prompter to enter valid answer                 |
+| Valid                      | Prompts next question: enter URL?                                                           | A filled input with more than 3 characters                                              | Prompts next question: enter URL?                                                           |
+| **Enter URL/Name:**        |                                                                                             |                                                                                         |                                                                                             |
+| Invalid                    | Invalid answer message is displayed and user prompter to enter valid answer                 | empty input                                                                             | Invalid answer message is displayed and user prompter to enter valid answer                 |
+| Invalid                    | Invalid answer message is displayed and user prompter to enter valid answer                 | input < 3                                                                               | Invalid answer message is displayed and user prompter to enter valid answer                 |
+| Valid                      | Prompts next question: restart?                                                             | A filled input with more than 3 characters                                              | Prompts next question: restart?                                                             |
+| **Restart?:**              |                                                                                             |                                                                                         |                                                                                             |
+| Invalid                    | Invalid answer message is displayed and user prompter to enter valid answer                 | input != "y", "Y", "n" or "N"                                                           | Invalid answer message is displayed and user prompter to enter valid answer                 |
+| Valid                      | If "y" or "Y" reloads the program, if "n" or "N" exit program                               | input = "y", "Y", "n" or "N"                                                            | If "y" or "Y" reloads the program, if "n" or "N" exit program                               |
+
+<details>
+<summary>Name's Input Validation</summary>
+<br>
+
+![Name's Input Validation](docs/images/beginning-validation.jpg)
+
+</details>
+<details>
+<summary>Length's Input Validation</summary>
+<br>
+
+![Length's Input Validation](docs/images/length-input-validation.jpg)
+
+</details>
+<details>
+<summary>Style's Input Validation</summary>
+<br>
+
+![Style's Input Validation](docs/images/style-validation.jpg)
+
+</details>
+<details>
+<summary>Save Input Validation</summary>
+<br>
+
+![Save Input Validation](docs/images/save-validation.jpg)
+
+</details>
+<details>
+<summary>Username/URL Input Validation</summary>
+<br>
+
+![Username/URL Input Validation](docs/images/login-inputs-validation.jpg)
+
+</details>
+<details>
+<summary>Restart/Exit Input Validation</summary>
+<br>
+
+![Restart/Exit Input Validation](docs/images/final-question-validation.jpg)
+
+</details>
 
 # HTML Validation
 
