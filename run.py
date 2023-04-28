@@ -145,7 +145,7 @@ def welcome_message():
                 raise ValueError("a maximum of 16 characters.")
             else:
                 typewriter_print(
-                    "Hi "
+                    "\nHi "
                     + Fore.BLUE
                     + f"{user_name}"
                     + Style.RESET_ALL
