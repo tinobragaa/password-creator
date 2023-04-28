@@ -135,6 +135,7 @@ def welcome_message():
 
             if user_name == "exit":
                 exit_generator()
+                break
             elif user_name == "":
                 raise ValueError("name cannot be blank.")
             elif user_name.isdigit():
@@ -182,6 +183,7 @@ def get_length():
 
             if password_length_chosen == "exit":
                 exit_generator()
+                break
             else:
                 password_length_chosen = int(password_length_chosen)
 
@@ -232,6 +234,7 @@ def get_style(password_length_chosen):
             password_style = input()
             if password_style == "exit":
                 exit_generator()
+                break
             else:
                 password_style = int(password_style)
 
@@ -343,6 +346,7 @@ def display_password(password):
             if save_password == "exit":
                 time.sleep(1)
                 exit_generator()
+                break
             elif save_password in ("y", "Y"):
                 time.sleep(2)
                 return True
@@ -372,6 +376,7 @@ def display_password(password):
             elif reset in ("n", "N", "exit"):
                 time.sleep(1)
                 exit_generator()
+                break
             else:
                 raise ValueError
             return
@@ -431,6 +436,7 @@ def store_password(password):
             if username == "exit":
                 time.sleep(1)
                 exit_generator()
+                break
             elif username == "":
                 raise ValueError("username cannot be blank.")
             elif len(username) < 3:
@@ -454,6 +460,7 @@ def store_password(password):
             if url == "exit":
                 time.sleep(1)
                 exit_generator()
+                break
             elif url == "":
                 raise ValueError("username cannot be blank.")
             elif len(url) < 3:
@@ -488,6 +495,7 @@ def store_password(password):
             elif reset in ("n", "N", "exit"):
                 time.sleep(1)
                 exit_generator()
+                break
             else:
                 raise ValueError
             return
