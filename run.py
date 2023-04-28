@@ -145,7 +145,11 @@ def welcome_message():
                 raise ValueError("a maximum of 16 characters.")
             else:
                 typewriter_print(
-                    f"\nHi {user_name}, let's make your unique password!"
+                    "Hi"
+                    + Fore.BLUE
+                    + f"{user_name}"
+                    + Style.RESET_ALL
+                    + ", let's make your unique password!"
                 )
                 time.sleep(2.5)
                 clear_terminal()
@@ -408,7 +412,7 @@ def store_password(password):
     )
     typewriter_print(
         "We just need your username and URL/Name. We'll guard your details "
-        + "so you don't need \nto worry!"
+        + "so you don't \nneed to worry!"
     )
     typewriter_print(
         "The password you created is:\n"
@@ -467,7 +471,8 @@ def store_password(password):
     new_row = [url, username, password]
     storage.append_row(new_row)
     typewriter_print(
-        "\nThe URL/Name, username, and password have been added to our database!"
+        "\nThe URL/Name, username, and password have been added to our "
+        + "database!"
     )
 
     typewriter_print("Would you like to start again? ( Y / N )")
