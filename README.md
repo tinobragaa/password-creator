@@ -114,6 +114,8 @@ I designed the following flowchart using Lucid charts to grasp the necessary ste
 
 # Features
 
+The website contain a python terminal with 5 interfaces and a 404 Error Page. 
+
 ### Start Interface
 - Appealing design, abstract patterns in the background image to reference a database;
 - Centralized terminal and button for a better experience;
@@ -599,7 +601,9 @@ To contribute or check the code yourself, you can fork or clone the repository a
 
 # Credits
 
-### A list of references and tutorials used for the project:
+A list of references used for the site:
+
+### References and Tutorials
 
 * [Password Generator Tutorial](https://www.geeksforgeeks.org/create-a-random-password-generator-using-python/)
 * [How to Create Random Strings](https://favtutor.com/blogs/create-random-string-password-python)
